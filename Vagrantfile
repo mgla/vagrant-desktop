@@ -23,8 +23,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         "--memory", "4096",
         "--vram", "32",
         "--cpus", "2",
-        "--ioapic", "on"
+        "--ioapic", "on",
+		"--clipboard", "bidirectional"
       ]
+	  vb.customize ["storageattach", :id, 
+        "--storagectl", "SATA Controller",
+        "--port", "1", "--device", "0",
+        "--type", "dvddrive",
+        "--medium", "emptydrive"]
     end
     master.vm.provision :hosts, :sync_hosts => true
     master.vm.provision "shell", path:   "vagrant/system-prep.sh"
