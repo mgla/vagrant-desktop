@@ -12,6 +12,7 @@ Self-installing vagrant-based linux desktop for windows.
     ```shell
     $ vagrant plugin install vagrant-hosts-provisioner
     $ vagrant plugin install vagrant-hosts
+    $ vagrant plugin install vagrant-vbguest
     ```
 
 

@@ -7,6 +7,8 @@ hostname_prefix = 'local01-'
 domain = 'local'
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  # https://github.com/dotless-de/vagrant-vbguest
+  config.vbguest.auto_update = true
   config.vm.define "linuxgui" do |master|
     master.vm.box      = "debian/contrib-jessie64"
     master.vm.box_url  = "https://atlas.hashicorp.com/debian/contrib-jessie64"
