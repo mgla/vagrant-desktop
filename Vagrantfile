@@ -10,8 +10,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # https://github.com/dotless-de/vagrant-vbguest
   config.vbguest.auto_update = true
   config.vm.define "linuxgui" do |master|
-    master.vm.box      = "debian/contrib-jessie64"
-    master.vm.box_url  = "https://atlas.hashicorp.com/debian/contrib-jessie64"
+    master.vm.box      = "debian/contrib-stretch64"
     master.vm.hostname = "#{hostname_prefix}-linuxgui.#{domain}"
     master.vm.network    "private_network", ip: "192.168.33.10"
     master.vm.network    "forwarded_port", guest: 8000, host: 8000

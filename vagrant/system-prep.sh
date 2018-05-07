@@ -1,6 +1,9 @@
 #!/bin/bash
 apt-get update
-apt-get install -y fluxbox virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11 x11-xserver-utils xinit lightdm
+# virtualbox desktop integration
+#apt-get install -y virtualbox-guest-dkms virtualbox-guest-utils
+# X11
+apt-get install -y fluxbox xinit lightdm x11-xserver-utils
 sed -i 's/allowed_users=.*$/allowed_users=anybody/' /etc/X11/Xwrapper.config
 
 ## Other programs
