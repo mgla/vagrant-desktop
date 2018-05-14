@@ -10,9 +10,11 @@ sed -i 's/allowed_users=.*$/allowed_users=anybody/' /etc/X11/Xwrapper.config
 apt-get install -y git vim htop xterm chromium dos2unix dnsutils
 
 # Some of my more personal preferred software. Comment it out if you do not like it
-apt-get install -y zsh tree tmux curl jq vim-nox awscli perl-doc keychain python-pip aptitude
+apt-get install -y zsh tree tmux curl jq vim-nox perl-doc keychain python-pip aptitude python3-pip
 # Some libraries I often use
 apt-get install -y libwww-perl libjson-perl python-yaml libyaml-perl
+# Python global stuff
+pip install awscli aws-shell
 
 chsh vagrant -s /bin/zsh
 
